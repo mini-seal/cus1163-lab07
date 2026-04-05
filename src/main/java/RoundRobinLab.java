@@ -21,7 +21,9 @@ public class RoundRobinLab {
 
     public static void scheduleRoundRobin(List<Process> processes, int timeQuantum) {
         int currentTime = 0;
+
         ArrayList<Process> readyQueue = new ArrayList<>();
+
         for(Process p : processes) {
         	readyQueue.add(p);
         }
