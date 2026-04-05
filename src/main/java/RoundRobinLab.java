@@ -48,7 +48,6 @@ public class RoundRobinLab {
         	p.turnaroundTime = p.completionTime - p.arrivalTime;
         	p.waitingTime = p.turnaroundTime - p.burstTime;
         }
-
     }
 
     /**
