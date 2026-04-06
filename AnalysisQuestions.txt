@@ -1,0 +1,44 @@
+1. Compare the results with time quantum 3 and time quantum 5. Which quantum gave better average waiting time? Why? 
+    
+      My output resulted in the same waiting and turnaround times for time quantum 3 and 5. 
+      For this question, I will observe the expected output waiting times of 6.67ms for a time quantum of 3ms and 5.00ms 
+      for a time quantum of 5ms, as provided in the lab.   
+      
+      Based on the provided times, time quantum 5 gave the better average waiting time of 5.00ms. 
+      This is because there is less context switching and more CPU time for each process before being placed back in the queue. 
+      Time quantum 5 performs better in this simulation because it reduces unnecessary context switching and allows fair CPU sharing. 
+      Still, a number that is too high or too low can lead to increased overhead and longer waiting times. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+2. What would happen if the time quantum was 1ms? Would the system be more or less efficient? 
+
+      If the time quantum were 1ms, the system would be less efficient because the CPU would spend much of its time 
+      context switching rather than executing processes. This would lead to high overhead, increases average waiting time, 
+      and reduce overall system performance. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+3. What would happen if the time quantum was 20ms (larger than any process burst time)? How would Round Robin behave then? 
+      
+      If the time quantum were larger than any process's burst time, each process would finish execution without being preempted,
+      and no process would be placed back into the Round Robin queue. So if we had a time quantum of 20ms, which is larger than any 
+      process burst time, our Round Robin simulator wouldn't simulate Round Robin behavior because the circular loop it facilitates with 
+      a queue would never occur.  It would behave like FCFS because the circular queue would never be used. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+4. In the simulation with quantum 3, how many context switches occurred? Count each time a process was removed from the queue.
+      
+      In the simulation with quantum 3, my output matched the expected, and 6 context switches occurred. 
+      Process 1 was removed from the queue 3 times; process 2 was removed 2 times; process 3 was removed 1 time. 
+      Altogether, there were 6 instances in which a process was removed from the queue.   
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+5. Why does Round Robin prevent the convoy effect that occurs in FCFS scheduling? 
+      
+      Round Robin prevents the convoy effect that occurs in FCFS by assigning a designated amount of time (time quantum) to each 
+      process in the CPU; if it has not completed, it removes it and puts it back into the queue. This prevents short processes from 
+      being stuck waiting behind long processes. All processes are sent to the CPU to be executed in parts, rather than waiting until
+      a whole process is completed.    
